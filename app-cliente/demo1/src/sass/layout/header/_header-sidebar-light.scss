@@ -6,6 +6,7 @@
     .app-header {
         background-color: transparent;    
         box-shadow: none;
+        border-bottom: 1px solid var(--#{$prefix}app-sidebar-light-separator-color);
     }
 
     // Desktop mode

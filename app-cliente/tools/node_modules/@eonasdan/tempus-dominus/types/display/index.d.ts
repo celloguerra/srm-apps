@@ -18,6 +18,8 @@ export default class Display {
     private optionsStore;
     private validation;
     private dates;
+    private _eventEmitters;
+    private _keyboardEventBound;
     dateDisplay: DateDisplay;
     monthDisplay: MonthDisplay;
     yearDisplay: YearDisplay;
@@ -26,7 +28,6 @@ export default class Display {
     hourDisplay: HourDisplay;
     minuteDisplay: MinuteDisplay;
     secondDisplay: SecondDisplay;
-    private _eventEmitters;
     constructor();
     /**
      * Returns the widget body or undefined
@@ -144,5 +145,12 @@ export default class Display {
      */
     _rebuild(): void;
     refreshCurrentView(): void;
+    private _keyboardEvent;
+    findViewDateElement(): HTMLElement;
+    private _handleKeyDownDate;
+    private _handleKeyDownClock;
+    private _handleTab;
+    private _handleFocus;
+    private _handleFocusClock;
 }
 export type Paint = (unit: Unit | 'decade', innerDate: DateTime, classes: string[], element: HTMLElement) => void;

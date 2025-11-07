@@ -12,6 +12,10 @@
             @include scrollbar-color(transparent, var(--#{$prefix}app-sidebar-light-scrollbar-color));
         }
 
+        .app-sidebar-logo {
+            border-bottom: 1px solid var(--#{$prefix}app-sidebar-light-separator-color);
+        }
+
         .app-sidebar-toggle {
             @include button-custom-variant(
                 $color:null, 

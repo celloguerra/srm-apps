@@ -7,6 +7,7 @@ export default interface Options {
     debug?: boolean;
     defaultDate?: DateTime;
     display?: {
+        keyboardNavigation?: boolean;
         toolbarPlacement?: 'top' | 'bottom';
         components?: {
             calendar?: boolean;
@@ -113,4 +114,5 @@ export interface Localization extends FormatLocalization {
     startOfTheWeek?: number;
     today?: string;
     toggleMeridiem?: string;
+    toggleAriaLabel?: string;
 }

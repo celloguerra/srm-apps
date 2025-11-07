@@ -17,7 +17,6 @@ export default class DateDisplay {
      * @private
      */
     _update(widget: HTMLElement, paint: Paint): void;
-    private _dateToDataValue;
     private _handleDateRange;
     private handleMouseEvents;
     private _updateCalendarView;

@@ -40,7 +40,7 @@ License: For each use you must have a valid license purchased only from above li
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+	<body id="kt_app_body" data-kt-app-layout="light-header" data-kt-app-header-fixed="true" data-kt-app-header-fixed-mobile="true" class="app-default">
 		<!--begin::Theme mode setup on page load-->
 		<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
 		<!--end::Theme mode setup on page load-->
@@ -57,7 +57,7 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_sidebar_mobile_toggle">
 								<i class="ki-duotone ki-abstract-14 fs-1">
 									<span class="path1"></span>
-									<span class="path2"></span>
+									<span class="path2"></span> 
 								</i>
 							</div>
 						</div>
@@ -213,7 +213,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin:Menu link-->
 															<a href="dashboards/bidding.html" class="menu-link">
 																<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-																	<i class="ki-outline ki-switch text-warning fs-1">
+																	<i class="ki-duotone ki-switch text-warning fs-1">
 																		<span class="path1"></span>
 																		<span class="path2"></span>
 																	</i>
@@ -235,7 +235,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin:Menu link-->
 															<a href="dashboards/online-courses.html" class="menu-link">
 																<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-																	<i class="ki-outline ki-color-swatch text-success fs-1">
+																	<i class="ki-duotone ki-color-swatch text-success fs-1">
 																		<span class="path1"></span>
 																		<span class="path2"></span>
 																		<span class="path3"></span>
@@ -276,7 +276,7 @@ License: For each use you must have a valid license purchased only from above li
 															<!--begin:Menu link-->
 															<a href="dashboards/logistics.html" class="menu-link">
 																<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
-																	<i class="ki-outlone ki-truck text-info fs-1">
+																	<i class="ki-duotone ki-truck text-info fs-1">
 																		<span class="path1"></span>
 																		<span class="path2"></span>
 																		<span class="path3"></span>
@@ -4196,7 +4196,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-category fs-2"></i>
+													<i class="ki-duotone ki-category fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+														<span class="path4"></span>
+													</i>
 												</span>
 												<span class="menu-title">Dashboards</span>
 												<span class="menu-arrow"></span>
@@ -4216,8 +4221,119 @@ License: For each use you must have a valid license purchased only from above li
 													<!--end:Menu link-->
 												</div>
 												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="dashboards/projects.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Projects</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="dashboards/ecommerce.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">eCommerce</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="dashboards/marketing.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Marketing</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<div class="menu-inner flex-column collapse" id="kt_app_sidebar_menu_dashboards_collapse">
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="dashboards/social.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Social</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="dashboards/bidding.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Bidding</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="dashboards/online-courses.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Online Courses</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+													<!--begin:Menu item-->
+													<div class="menu-item">
+														<!--begin:Menu link-->
+														<a class="menu-link" href="dashboards/logistics.html">
+															<span class="menu-bullet">
+																<span class="bullet bullet-dot"></span>
+															</span>
+															<span class="menu-title">Logistics</span>
+														</a>
+														<!--end:Menu link-->
+													</div>
+													<!--end:Menu item-->
+												</div>
+												<div class="menu-item">
+													<div class="menu-content">
+														<a class="btn btn-flex btn-color-gray-500 btn-icon-gray-500 d-flex flex-stack fs-base p-0 ms-2 mb-2 toggle collapsible collapsed" data-bs-toggle="collapse" href="#kt_app_sidebar_menu_dashboards_collapse" data-kt-toggle-text="Show Less">
+															<span data-kt-toggle-text-target="true">Show 4 More</span>
+															<i class="ki-duotone ki-minus-square toggle-on fs-2 me-0 pe-0">
+																<span class="path1"></span>
+																<span class="path2"></span>
+															</i>
+															<i class="ki-duotone ki-plus-square toggle-off fs-2 me-0 pe-0">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</a>
+													</div>
+												</div>
 											</div>
 											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div class="menu-item pt-5">
+											<!--begin:Menu content-->
+											<div class="menu-content">
+												<span class="menu-heading fw-bold text-uppercase fs-7">Pages</span>
+											</div>
+											<!--end:Menu content-->
 										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
@@ -4225,9 +4341,13 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-address-book fs-2"></i>
+													<i class="ki-duotone ki-address-book fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+													</i>
 												</span>
-												<span class="menu-title">Fornecedores</span>
+												<span class="menu-title">User Profile</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4240,7 +4360,7 @@ License: For each use you must have a valid license purchased only from above li
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Empresas</span>
+														<span class="menu-title">Overview</span>
 													</a>
 													<!--end:Menu link-->
 												</div>
@@ -4252,7 +4372,7 @@ License: For each use you must have a valid license purchased only from above li
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Contratos</span>
+														<span class="menu-title">Projects</span>
 													</a>
 													<!--end:Menu link-->
 												</div>
@@ -4264,7 +4384,7 @@ License: For each use you must have a valid license purchased only from above li
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Prestadores</span>
+														<span class="menu-title">Campaigns</span>
 													</a>
 													<!--end:Menu link-->
 												</div>
@@ -4276,7 +4396,31 @@ License: For each use you must have a valid license purchased only from above li
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
-														<span class="menu-title">Ativos</span>
+														<span class="menu-title">Documents</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="pages/user-profile/followers.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Followers</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="pages/user-profile/activity.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Activity</span>
 													</a>
 													<!--end:Menu link-->
 												</div>
@@ -4290,9 +4434,14 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-educare fs-2"></i>
+													<i class="ki-duotone ki-educare fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+														<span class="path4"></span>
+													</i>
 												</span>
-												<span class="menu-title">Homologações</span>
+												<span class="menu-title">Account</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4415,9 +4564,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-user fs-2"></i>
+													<i class="ki-duotone ki-user fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
 												</span>
-												<span class="menu-title">Integrações</span>
+												<span class="menu-title">Authentication</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4730,9 +4882,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-file fs-2"></i>
+													<i class="ki-duotone ki-file fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
 												</span>
-												<span class="menu-title">Monitoramentos</span>
+												<span class="menu-title">Corporate</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4831,9 +4986,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-abstract-39 fs-2"></i>
+													<i class="ki-duotone ki-abstract-39 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
 												</span>
-												<span class="menu-title">Finanças</span>
+												<span class="menu-title">Social</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4896,9 +5054,12 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-bank fs-2"></i>
+													<i class="ki-duotone ki-bank fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
 												</span>
-												<span class="menu-title">Relatórios</span>
+												<span class="menu-title">Blog</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4937,9 +5098,18 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-icon">
-													<i class="ki-outline ki-call fs-2"></i>
+													<i class="ki-duotone ki-call fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+														<span class="path4"></span>
+														<span class="path5"></span>
+														<span class="path6"></span>
+														<span class="path7"></span>
+														<span class="path8"></span>
+													</i>
 												</span>
-												<span class="menu-title">Configurações</span>
+												<span class="menu-title">Careers</span>
 												<span class="menu-arrow"></span>
 											</span>
 											<!--end:Menu link-->
@@ -4974,19 +5144,1703 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-color-swatch fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+														<span class="path4"></span>
+														<span class="path5"></span>
+														<span class="path6"></span>
+														<span class="path7"></span>
+														<span class="path8"></span>
+														<span class="path9"></span>
+														<span class="path10"></span>
+														<span class="path11"></span>
+														<span class="path12"></span>
+														<span class="path13"></span>
+														<span class="path14"></span>
+														<span class="path15"></span>
+														<span class="path16"></span>
+														<span class="path17"></span>
+														<span class="path18"></span>
+														<span class="path19"></span>
+														<span class="path20"></span>
+														<span class="path21"></span>
+													</i>
+												</span>
+												<span class="menu-title">Utilities</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Modals</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+															<!--begin:Menu link-->
+															<span class="menu-link">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">General</span>
+																<span class="menu-arrow"></span>
+															</span>
+															<!--end:Menu link-->
+															<!--begin:Menu sub-->
+															<div class="menu-sub menu-sub-accordion menu-active-bg">
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/general/invite-friends.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Invite Friends</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/general/view-users.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">View Users</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/general/select-users.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Select Users</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/general/upgrade-plan.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Upgrade Plan</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/general/share-earn.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Share & Earn</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+															</div>
+															<!--end:Menu sub-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+															<!--begin:Menu link-->
+															<span class="menu-link">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Forms</span>
+																<span class="menu-arrow"></span>
+															</span>
+															<!--end:Menu link-->
+															<!--begin:Menu sub-->
+															<div class="menu-sub menu-sub-accordion menu-active-bg">
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/forms/new-target.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">New Target</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/forms/new-card.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">New Card</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/forms/new-address.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">New Address</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/forms/create-api-key.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Create API Key</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/forms/bidding.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Bidding</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+															</div>
+															<!--end:Menu sub-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+															<!--begin:Menu link-->
+															<span class="menu-link">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Wizards</span>
+																<span class="menu-arrow"></span>
+															</span>
+															<!--end:Menu link-->
+															<!--begin:Menu sub-->
+															<div class="menu-sub menu-sub-accordion menu-active-bg">
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/create-app.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Create App</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/create-campaign.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Create Campaign</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/create-account.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Create Business Acc</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/create-project.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Create Project</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/top-up-wallet.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Top Up Wallet</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/offer-a-deal.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Offer a Deal</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/wizards/two-factor-authentication.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Two Factor Auth</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+															</div>
+															<!--end:Menu sub-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+															<!--begin:Menu link-->
+															<span class="menu-link">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Search</span>
+																<span class="menu-arrow"></span>
+															</span>
+															<!--end:Menu link-->
+															<!--begin:Menu sub-->
+															<div class="menu-sub menu-sub-accordion menu-active-bg">
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/search/users.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Users</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+																<!--begin:Menu item-->
+																<div class="menu-item">
+																	<!--begin:Menu link-->
+																	<a class="menu-link" href="utilities/modals/search/select-location.html">
+																		<span class="menu-bullet">
+																			<span class="bullet bullet-dot"></span>
+																		</span>
+																		<span class="menu-title">Select Location</span>
+																	</a>
+																	<!--end:Menu link-->
+																</div>
+																<!--end:Menu item-->
+															</div>
+															<!--end:Menu sub-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Search</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/search/horizontal.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Horizontal</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/search/vertical.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Vertical</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/search/users.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Users</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/search/select-location.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Location</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Wizards</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/horizontal.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Horizontal</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/vertical.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Vertical</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/two-factor-authentication.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Two Factor Auth</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/create-app.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Create App</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/create-campaign.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Create Campaign</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/create-account.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Create Account</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/create-project.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Create Project</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/modals/wizards/top-up-wallet.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Top Up Wallet</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="utilities/wizards/offer-a-deal.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Offer a Deal</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										
+										<div class="menu-item pt-5">
+											<!--begin:Menu content-->
+											<div class="menu-content">
+												<span class="menu-heading fw-bold text-uppercase fs-7">Apps</span>
+											</div>
+											<!--end:Menu content-->
+										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-abstract-41 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Projects</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/list.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">My Projects</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/project.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">View Project</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/targets.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Targets</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/budget.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Budget</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/users.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Users</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/files.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Files</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/activity.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Activity</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/projects/settings.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Settings</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-basket fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+														<span class="path4"></span>
+													</i>
+												</span>
+												<span class="menu-title">eCommerce</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Catalog</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/products.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Products</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/categories.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Categories</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/add-product.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Add Product</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/edit-product.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Edit Product</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/add-category.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Add Category</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/catalog/edit-category.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Edit Category</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Sales</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/sales/listing.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Orders Listing</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/sales/details.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Order Details</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/sales/add-order.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Add Order</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/sales/edit-order.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Edit Order</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Customers</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/customers/listing.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Customer Listing</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/customers/details.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Customer Details</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Reports</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/reports/view.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Products Viewed</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/reports/sales.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Sales</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/reports/returns.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Returns</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/reports/customer-orders.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Customer Orders</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/ecommerce/reports/shipping.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Shipping</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/ecommerce/settings.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Settings</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-abstract-25 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Contacts</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/contacts/getting-started.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Getting Started</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/contacts/add-contact.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Add Contact</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/contacts/edit-contact.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Edit Contact</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/contacts/view-contact.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">View Contact</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-chart fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Support Center</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/support-center/overview.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Overview</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Tickets</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/support-center/tickets/list.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Tickets List</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/support-center/tickets/view.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">View Ticket</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Tutorials</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/support-center/tutorials/list.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Tutorials List</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/support-center/tutorials/post.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Tutorial Post</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/support-center/faq.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">FAQ</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/support-center/licenses.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Licenses</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/support-center/contact.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Contact Us</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-abstract-28 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">User Management</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion mb-1">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Users</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/user-management/users/list.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Users List</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/user-management/users/view.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">View User</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Roles</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/user-management/roles/list.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Roles List</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/user-management/roles/view.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">View Role</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/user-management/permissions.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Permissions</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-abstract-38 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Customers</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/customers/getting-started.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Getting Started</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/customers/list.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Customer Listing</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/customers/view.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Customer Details</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-map fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+													</i>
+												</span>
+												<span class="menu-title">Subscription</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/subscriptions/getting-started.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Getting Started</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/subscriptions/list.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Subscription List</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/subscriptions/add.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Add Subscription</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/subscriptions/view.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">View Subscription</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-credit-cart fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Invoice Manager</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+													<!--begin:Menu link-->
+													<span class="menu-link">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">View Invoices</span>
+														<span class="menu-arrow"></span>
+													</span>
+													<!--end:Menu link-->
+													<!--begin:Menu sub-->
+													<div class="menu-sub menu-sub-accordion menu-active-bg">
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/invoices/view/invoice-1.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Invoice 1</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/invoices/view/invoice-2.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Invoice 2</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+														<!--begin:Menu item-->
+														<div class="menu-item">
+															<!--begin:Menu link-->
+															<a class="menu-link" href="apps/invoices/view/invoice-3.html">
+																<span class="menu-bullet">
+																	<span class="bullet bullet-dot"></span>
+																</span>
+																<span class="menu-title">Invoice 3</span>
+															</a>
+															<!--end:Menu link-->
+														</div>
+														<!--end:Menu item-->
+													</div>
+													<!--end:Menu sub-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/invoices/create.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Create Invoice</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-switch fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">File Manager</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/file-manager/folders.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Folders</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/file-manager/files.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Files</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/file-manager/blank.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Blank Directory</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/file-manager/settings.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Settings</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-sms fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+													</i>
+												</span>
+												<span class="menu-title">Inbox</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/inbox/listing.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Messages</span>
+														<span class="menu-badge">
+															<span class="badge badge-success">3</span>
+														</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/inbox/compose.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Compose</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/inbox/reply.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">View & Reply</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
+										<!--end:Menu item-->
+										<!--begin:Menu item-->
+										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+											<!--begin:Menu link-->
+											<span class="menu-link">
+												<span class="menu-icon">
+													<i class="ki-duotone ki-message-text-2 fs-2">
+														<span class="path1"></span>
+														<span class="path2"></span>
+														<span class="path3"></span>
+													</i>
+												</span>
+												<span class="menu-title">Chat</span>
+												<span class="menu-arrow"></span>
+											</span>
+											<!--end:Menu link-->
+											<!--begin:Menu sub-->
+											<div class="menu-sub menu-sub-accordion">
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/chat/private.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Private Chat</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/chat/group.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Group Chat</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+												<!--begin:Menu item-->
+												<div class="menu-item">
+													<!--begin:Menu link-->
+													<a class="menu-link" href="apps/chat/drawer.html">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+														<span class="menu-title">Drawer Chat</span>
+													</a>
+													<!--end:Menu link-->
+												</div>
+												<!--end:Menu item-->
+											</div>
+											<!--end:Menu sub-->
+										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
 										<div class="menu-item">

@@ -5,6 +5,7 @@ import { Paint } from '../index';
 export default class HourDisplay {
     private optionsStore;
     private validation;
+    private dates;
     constructor();
     /**
      * Build the container html for the display

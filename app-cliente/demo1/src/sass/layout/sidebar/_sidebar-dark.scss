@@ -12,6 +12,10 @@
             @include scrollbar-color(transparent, $app-sidebar-dark-scrollbar-color);
         }
 
+        .app-sidebar-logo {
+            border-bottom: 1px dashed var(--#{$prefix}app-sidebar-dark-separator-color);
+        }
+
         .app-sidebar-toggle {
             @include button-custom-variant(
                 $color:null, 

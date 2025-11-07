@@ -143,14 +143,19 @@ export default class Actions {
         this.display.hide();
         break;
       case ActionTypes.today: {
-        const today = new DateTime().setLocalization(
+        const day = new DateTime().setLocalization(
           this.optionsStore.options.localization
         );
-        this._eventEmitters.updateViewDate.emit(today);
+        this._eventEmitters.updateViewDate.emit(day);
 
-        //todo this this really a good idea?
-        if (this.validation.isValid(today, Unit.date))
-          this.dates.setValue(today, this.dates.lastPickedIndex);
+        if (!this.validation.isValid(day, Unit.date)) break;
+
+        if (this.optionsStore.options.dateRange) this.handleDateRange(day);
+        else if (this.optionsStore.options.multipleDates) {
+          this.handleMultiDate(day);
+        } else {
+          this.dates.setValue(day, this.dates.lastPickedIndex);
+        }
         break;
       }
     }
@@ -192,9 +197,11 @@ export default class Actions {
         break;
     }
 
-    (<HTMLElement>(
-      this.display.widget.getElementsByClassName(classToUse)[0]
-    )).style.display = 'grid';
+    const element = this.display.widget.getElementsByClassName(
+      classToUse
+    )[0] as HTMLElement;
+    element.style.display = 'grid';
+    (<HTMLElement>element.children[0])?.focus();
   }
 
   private handleNextPrevious(action: ActionTypes) {
@@ -308,6 +315,10 @@ export default class Actions {
       )
       .forEach((htmlElement: HTMLElement) => Collapse.toggle(htmlElement));
     this._eventEmitters.viewUpdate.emit();
+    const visible = this.display.widget.querySelector(
+      `.${Namespace.css.collapsing} > div[style*="display: grid"]`
+    ) as HTMLElement;
+    visible?.focus();
   }
 
   private handleSelectDay(currentTarget: HTMLElement) {
@@ -340,7 +351,6 @@ export default class Actions {
 
   private handleMultiDate(day: DateTime) {
     let index = this.dates.pickedIndex(day, Unit.date);
-    console.log(index);
     if (index !== -1) {
       this.dates.setValue(null, index); //deselect multi-date
     } else {

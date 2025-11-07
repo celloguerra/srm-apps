@@ -200,6 +200,7 @@ export declare class DateTime extends Date {
      * Returns the number of weeks in the year
      */
     weeksInWeekYear(): 53 | 52;
+    dateToDataValue(): string;
     /**
      * Returns true or false depending on if the year is a leap year or not.
      */

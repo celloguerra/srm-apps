@@ -31,6 +31,7 @@ export declare const DefaultEnLocalization: {
     startOfTheWeek?: number;
     today?: string;
     toggleMeridiem?: string;
+    toggleAriaLabel?: string;
     dateFormats?: {
         L?: string;
         LL?: string;
