@@ -58,15 +58,17 @@ $app-sidebar-light-header-menu-link-bg-color-active: #EAEEF2;
 $app-sidebar-light-header-menu-link-bg-color-active-dark: $gray-100-dark;
     
 // Sidebar dark
-$app-sidebar-dark-bg-color: #202B46; // $coal-100;
+$app-sidebar-dark-bg-color: #000; // $coal-100;
 $app-sidebar-dark-bg-color-dark:  $coal-100;
-$app-sidebar-dark-separator-color: #33446C;
+$app-sidebar-dark-separator-color: #646477;
 $app-sidebar-dark-separator-color-dark: $gray-200-dark;
 $app-sidebar-dark-scrollbar-color: lighten($app-sidebar-dark-bg-color, 10%);
 $app-sidebar-dark-menu-heading-color: #646477;
 $app-sidebar-dark-menu-heading-color-dark: #646477;
-$app-sidebar-dark-menu-link-bg-color-active:#3E97FF;
-$app-sidebar-dark-toggle-btn-bg-color: #323C55;
+$app-sidebar-dark-menu-link-bg-color-active:#e76e00;
+$app-sidebar-dark-toggle-btn-bg-color: transparent;
+$app-sidebar-dark-toggle-btn-icon-color: $gray-400;
+$app-sidebar-dark-toggle-btn-icon-color-active:$gray-400;
 $app-sidebar-dark-toggle-btn-bg-color-dark: $gray-200-dark;
 	
 
@@ -99,7 +101,4 @@ $app-layout-builder-toggle-end-mobile: 40px;
 $app-layout-builder-toggle-bottom: 40px;
 $app-layout-builder-toggle-bottom-mobile: 20px;
  
- 
- 
-
  
