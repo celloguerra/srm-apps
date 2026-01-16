@@ -129,19 +129,26 @@
                         <!--end::Page title-->
                         <!--begin: :Workspace-->
                         <div
-                            class="d-none d-lg-flex align-items-center position-absolute top-50 start-50 translate-middle z-index-1">
-                            <!--begin::Input group-->
-                            <div class="form-floating">
-                                <select class="form-select" id="floatingSelect"
-                                    aria-label="Floating label select example">
-                                    <option selected>Open this select menu</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
-                                <label for="floatingSelect">Área de Trabalho</label>
-                            </div>
-                            <!--end::Input group-->
+                            class="d-none d-lg-flex align-items-center position-absolute top-50 start-50 translate-middle z-index-1 w-50 w-xl-60">
+                            <a href="#"
+                                class="btn btn-outline btn-active-light border-gray-300 btn-icon-gray-500 btn-active-icon-primary d-flex align-items-center justify-content-between px-4 h-55px w-100"
+                                data-kt-menu-trigger="{default:'click'}" data-kt-menu-placement="bottom-end">
+
+                                <div class="d-flex align-items-center">
+                                    <i class="ki-outline ki-burger-menu-2 fs-1 me-3"></i>
+
+                                    <div class="d-flex flex-column text-start">
+                                        <span class="fs-9 fw-semibold text-muted text-uppercase lh-1 mb-1">
+                                            Área de Trabalho
+                                        </span>
+                                        <span class="fs-6 fw-semibold text-gray-800 lh-1">
+                                            Albioma Participações Ltda &gt; ABC Construções Ltda
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <i class="ki-outline ki-down fs-4 ms-4"></i>
+                            </a>
                         </div>
                         <!--end: :Workspace-->
                         <!--begin::Navbar-->
@@ -204,19 +211,6 @@
                                     data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-attach="parent"
                                     data-kt-menu-placement="bottom-end">
                                     <i class="ki-outline ki-burger-menu-2 fs-1"></i>
-                                </div>
-
-                                <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg menu-state-color fw-semibold py-4 fs-6 w-200px"
-                                    data-kt-menu="true">
-                                    <div class="menu-item px-3">
-                                        <div class="menu-content px-3">
-                                            <span class="badge badge-light-primary py-1">Selecionar Unidade</span>
-                                        </div>
-                                    </div>
-                                    <div class="menu-item px-5"><a href="#" class="menu-link px-5">Unidade Rio de
-                                            Janeiro</a></div>
-                                    <div class="menu-item px-5"><a href="#" class="menu-link px-5">Unidade São Paulo</a>
-                                    </div>
                                 </div>
                             </div>
                             <!--end::Workspace Mobile-->
@@ -1171,8 +1165,25 @@
                         <div id="kt_app_content" class="app-content  flex-column-fluid ">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container  container-fluid ">
+
                                 <!--begin::Row-->
-                                Conteúdo App
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3>Conteúdo App</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h3>Conteúdo App</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Row-->
                             </div>
                             <!--end::Content container-->
                         </div>
