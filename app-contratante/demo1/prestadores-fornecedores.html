@@ -3,7 +3,7 @@
 <!--begin::Head-->
 
 <head>
-    <title>Painel Inicial - SRM+</title>
+    <title>Prestadores - SRM+</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/demo1/assets/media/logos/favicon.ico" />
@@ -103,7 +103,7 @@
                             <!--begin::Title-->
                             <h1
                                 class="page-heading d-flex text-gray-900 fw-bold fs-3 flex-column justify-content-center my-0">
-                                Início
+                                Prestadores
                             </h1>
                             <!--end::Title-->
                             <!--begin::Breadcrumb-->
@@ -111,7 +111,7 @@
                                 <!--begin::Item-->
                                 <li class="breadcrumb-item text-muted">
                                     <a href="/keen/demo1/index.html" class="text-muted text-hover-primary">
-                                        Painéis </a>
+                                        Recursos </a>
                                 </li>
                                 <!--end::Item-->
                                 <!--begin::Item-->
@@ -121,7 +121,7 @@
                                 <!--end::Item-->
                                 <!--begin::Item-->
                                 <li class="breadcrumb-item text-muted">
-                                    Início </li>
+                                    Prestadores </li>
                                 <!--end::Item-->
                             </ul>
                             <!--end::Breadcrumb-->
@@ -350,14 +350,14 @@
                                 <div class="menu menu-column menu-rounded menu-sub-indention fw-semibold"
                                     id="#kt_app_sidebar_menu" data-kt-menu="true" data-kt-menu-expand="false">
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
                                         <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
                                                     class="ki-outline ki-category fs-2"></i></span><span
                                                 class="menu-title">Painéis</span><span
                                                 class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                         <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link active"
-                                                    href="/keen/demo1/index.html"><span class="menu-bullet"><span
+                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
+                                                    href="index-fornecedores.html"><span class="menu-bullet"><span
                                                             class="bullet bullet-dot"></span></span><span
                                                         class="menu-title">Início</span></a><!--end:Menu link--></div>
                                             <!--end:Menu item--><!--begin:Menu item-->
@@ -365,21 +365,23 @@
                                     </div>
                                     <!--end:Menu item-->
                                     <!--begin:Menu item-->
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item show here menu-accordion">
                                         <!--begin:Menu link--><span class="menu-link"><span class="menu-icon"><i
                                                     class="ki-outline ki-folder fs-2"></i></span><span
                                                 class="menu-title">Recursos</span><span
                                                 class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                         <div class="menu-sub menu-sub-accordion">
                                             <!--begin:Menu item-->
-                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="contratos-fornecedores.html"><span class="menu-bullet"><span
+                                            <div class="menu-item"><!--begin:Menu link--><a class="menu-link active"
+                                                    href="/keen/demo1/authentication/general/coming-soon.html"><span
+                                                        class="menu-bullet"><span
                                                             class="bullet bullet-dot"></span></span><span
                                                         class="menu-title">Contratos</span></a><!--end:Menu link-->
                                             </div><!--end:Menu item-->
                                             <!--begin:Menu item-->
                                             <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                    href="prestadores-fornecedores.html"><span class="menu-bullet"><span
+                                                    href="/keen/demo1/authentication/general/coming-soon.html"><span
+                                                        class="menu-bullet"><span
                                                             class="bullet bullet-dot"></span></span><span
                                                         class="menu-title">Prestadores</span></a><!--end:Menu link-->
                                             </div><!--end:Menu item--><!--begin:Menu item-->
@@ -527,416 +529,269 @@
                         <div id="kt_app_content" class="app-content  flex-column-fluid ">
                             <!--begin::Content container-->
                             <div id="kt_app_content_container" class="app-container  container-fluid ">
-                                <!--begin::Row-->
-                                <div class="row g-5 gx-xl-10 mb-5 mb-xl-10">
-                                    <!--begin::Col-->
-                                    <div class="col-xl-6">
-
-                                        <!--begin::Table Widget 5-->
-                                        <div class="card card-flush h-xl-100" data-select2-id="select2-data-24-ketx">
-                                            <!--begin::Card header-->
-                                            <div class="card-header pt-7">
-                                                <h3 class="card-title align-items-center">
-
-                                                    <div class="symbol symbol-50px me-5">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i class="ki-outline ki-home-3 fs-1 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="card-label fw-bold text-gray-900">Empresa</span>
-                                                        <span class="text-gray-500 mt-1 fw-semibold fs-6">Total de 3
-                                                            documentos</span>
-                                                    </div>
-                                                </h3>
+                                <!--begin::Contratos-->
+                                <div class="card card-flush" data-protonpass-form="">
+                                    <!--begin::Card header-->
+                                    <div class="card-header align-items-center py-4 gap-2 gap-md-5">
+                                        <!--begin::Card title-->
+                                        <div class="card-title">
+                                            <!--begin::Search-->
+                                            <div class="d-flex align-items-center position-relative my-1">
+                                                <i class="ki-outline ki-magnifier fs-3 position-absolute ms-4"></i>
+                                                <input type="text" data-kt-ecommerce-product-filter="search"
+                                                    class="form-control form-control-solid w-250px ps-12"
+                                                    placeholder="Pesquisar">
                                             </div>
-                                            <!--end::Card header-->
-
-                                            <!--begin::Card body-->
-                                            <div class="card-body"> <!--begin::Table-->
-                                                <div id="kt_table_widget_5_table_wrapper"
-                                                    class="dt-container dt-bootstrap5 dt-empty-footer">
-                                                    <div id="" class="table-responsive">
-                                                        <table
-                                                            class="table align-middle table-row-dashed fs-6 gy-3 dataTable"
-                                                            id="kt_table_widget_5_table" style="width: 100%;">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <!--begin::Table row-->
-                                                                <tr
-                                                                    class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-                                                                    <th class="text-start pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Documento</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px ">
-                                                                        <span class="dt-column-title">Período</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Status</span>
-                                                                    </th>
-                                                                </tr>
-                                                                <!--end::Table row-->
-                                                            </thead>
-                                                            <!--end::Table head-->
-                                                            <!--begin::Table body-->
-                                                            <tbody class="text-gray-600">
-                                                                <tr>
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">FGTS
-                                                                            Digital (SEFIP 8.4)</a> </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-danger text-uppercase">Pendente</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Guia
-                                                                            FGTS e comprovante pagamento</a> </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-info text-uppercase">Aguardando</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Guia
-                                                                            INSS e comprovante pagamento</a> </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-warning text-uppercase">Vencendo</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Guia
-                                                                            INSS e comprovante pagamento</a> </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-secondary text-uppercase">Rejeitado</span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div id="" class="row">
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start dt-toolbar">
-                                                        </div>
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-autosize" style="width: 100%; height: 0px;"></div>
-                                                </div>
-                                                <!--end::Table-->
-                                            </div>
-                                            <!--end::Card body-->
+                                            <!--end::Search-->
                                         </div>
-                                        <!--end::Table Widget 5-->
-                                    </div>
-                                    <!--end::Col-->
+                                        <!--end::Card title-->
 
-                                    <!--begin::Col-->
-                                    <div class="col-xl-6" data-select2-id="select2-data-25-o7jb">
-
-                                        <!--begin::Table Widget 5-->
-                                        <div class="card card-flush h-xl-100" data-select2-id="select2-data-24-ketx">
-                                            <!--begin::Card header-->
-                                            <div class="card-header pt-7">
-                                                <h3 class="card-title align-items-center">
-
-                                                    <div class="symbol symbol-50px me-5">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i class="ki-outline ki-profile-user fs-1 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <span
-                                                            class="card-label fw-bold text-gray-900">Prestadores</span>
-                                                        <span class="text-gray-500 mt-1 fw-semibold fs-6">Total de 4
-                                                            prestadores</span>
-                                                    </div>
-                                                </h3>
+                                        <!--begin::Card toolbar-->
+                                        <div class="card-toolbar flex-row-fluid justify-content-end gap-5"
+                                            data-select2-id="select2-data-134-cgxs">
+                                            <div class="w-100 mw-150px">
+                                                <!--begin::Select2-->
+                                                <select class="form-select form-select-solid select2-hidden-accessible"
+                                                    data-control="select2" data-hide-search="true"
+                                                    data-placeholder="Status" data-kt-ecommerce-product-filter="status"
+                                                    data-select2-id="select2-data-10-qqcg" tabindex="-1"
+                                                    aria-hidden="true" data-kt-initialized="1">
+                                                    <option data-select2-id="select2-data-12-u40d"></option>
+                                                    <option value="all" data-select2-id="select2-data-137-awcc">All
+                                                    </option>
+                                                    <option value="published" data-select2-id="select2-data-138-x0ji">
+                                                        Published</option>
+                                                    <option value="scheduled" data-select2-id="select2-data-139-6hla">
+                                                        Scheduled</option>
+                                                    <option value="inactive" data-select2-id="select2-data-140-5psp">
+                                                        Inactive</option>
+                                                </select><span
+                                                    class="select2 select2-container select2-container--bootstrap5 select2-container--below"
+                                                    dir="ltr" data-select2-id="select2-data-11-gsm2"
+                                                    style="width: 100%;"><span class="selection"><span
+                                                            class="select2-selection select2-selection--single form-select form-select-solid"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            tabindex="0" aria-disabled="false"
+                                                            aria-labelledby="select2-lluw-container"
+                                                            aria-controls="select2-lluw-container"><span
+                                                                class="select2-selection__rendered"
+                                                                id="select2-lluw-container" role="textbox"
+                                                                aria-readonly="true" title="Status"><span
+                                                                    class="select2-selection__placeholder">Status</span></span><span
+                                                                class="select2-selection__arrow" role="presentation"><b
+                                                                    role="presentation"></b></span></span></span><span
+                                                        class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                <!--end::Select2-->
                                             </div>
-                                            <!--end::Card header-->
 
-                                            <!--begin::Card body-->
-                                            <div class="card-body"> <!--begin::Table-->
-                                                <div id="kt_table_widget_5_table_wrapper"
-                                                    class="dt-container dt-bootstrap5 dt-empty-footer">
-                                                    <div id="" class="table-responsive">
-                                                        <table
-                                                            class="table align-middle table-row-dashed fs-6 gy-3 dataTable"
-                                                            id="kt_table_widget_5_table" style="width: 100%;">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <!--begin::Table row-->
-                                                                <tr
-                                                                    class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-                                                                    <th class="min-w-150px">
-                                                                        <span class="dt-column-title">Nome</span>
-                                                                    </th>
-                                                                    <th class="text-start pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Integração</span>
-                                                                    </th>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Status</span>
-                                                                    </th>
-                                                                </tr>
-                                                                <!--end::Table row-->
-                                                            </thead>
-                                                            <!--end::Table head-->
-                                                            <!--begin::Table body-->
-                                                            <tbody class="text-gray-600">
-                                                                <tr>
 
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Edvaldo
-                                                                            José de Souza</a> </td>
-                                                                    <td class="text-start"> Ativa </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-danger text-uppercase">Pendente</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-
-                                                                    <td><a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Pedro
-                                                                            Paulo Salomão</a> </td>
-                                                                    <td class="text-start"> Ativa</td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-info text-uppercase">Aguardando</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Silvio
-                                                                            Oliveira</a> </td>
-                                                                    <td class="text-start"> Vencida</td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-warning text-uppercase">Vencendo</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-
-                                                                    <td> <a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">Carlos
-                                                                            Alberto Torres</a> </td>
-                                                                    <td class="text-start"> Vencida</td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-success text-uppercase">Aprovado</span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div id="" class="row">
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start dt-toolbar">
-                                                        </div>
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-autosize" style="width: 100%; height: 0px;"></div>
-                                                </div>
-                                                <!--end::Table-->
-                                            </div>
-                                            <!--end::Card body-->
                                         </div>
-                                        <!--end::Table Widget 5-->
+                                        <!--end::Card toolbar-->
                                     </div>
-                                    <!--end::Col-->
+                                    <!--end::Card header-->
+
+                                    <!--begin::Card body-->
+                                    <div class="card-body pt-0">
+
+                                        <!--begin::Table-->
+                                        <div id="kt_ecommerce_products_table_wrapper"
+                                            class="dt-container dt-bootstrap5 dt-empty-footer">
+                                            <div id="" class="table-responsive">
+                                                <table class="table align-middle table-row-bordered fs-6 gy-4 dataTable"
+                                                    id="kt_ecommerce_products_table" style="width: 100%;">
+                                                    <thead>
+                                                        <tr
+                                                            class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                                                            <th class="min-w-200px dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="1" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header"><span
+                                                                        class="dt-column-title">Descrição</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Product: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-100px dt-type-numeric dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="2" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header"><span
+                                                                        class="dt-column-title">Data Início</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="SKU: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-70px dt-type-numeric dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="3" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header"><span
+                                                                        class="dt-column-title">Data Fim</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Qty: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-100px dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="5" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header"><span
+                                                                        class="dt-column-title">Responsável</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Rating: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-100px dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="5" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header"><span
+                                                                        class="dt-column-title">E-mail</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Rating: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-100px dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="6" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header text-center"><span
+                                                                        class="dt-column-title">Status</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Status: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+                                                            <th class="min-w-100px dt-orderable-asc dt-orderable-desc"
+                                                                data-dt-column="6" rowspan="1" colspan="1">
+                                                                <div class="dt-column-header text-center"><span
+                                                                        class="dt-column-title">Ações</span><span
+                                                                        class="dt-column-order" role="button"
+                                                                        aria-label="Status: Activate to sort"
+                                                                        tabindex="0"></span></div>
+                                                            </th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="text-gray-700">
+                                                        <tr>
+                                                            <td><a href="detalhe-homologacao.html"
+                                                                    class="text-gray-800 text-hover-primary fw-bold"
+                                                                    data-kt-ecommerce-product-filter="product_name">
+                                                                    CONTRATO PARA TRASNPORTE DE PESSOAL</a></td>
+                                                            <td class="pe-0"> 25/03/2025</td>
+                                                            <td class="pe-0">25/03/2026</td>
+                                                            <td class="pe-0">Martha Alves</td>
+                                                            <td class="pe-0">martha.alves@albioma.com.br</td>
+                                                            <td class="pe-0 text-center">
+                                                                <div class="badge badge-light-warning text-uppercase">
+                                                                    Vencendo</div>
+                                                            </td>
+                                                            <td class="pe-0 text-center"><a href="#"
+                                                                    class="btn btn-sm btn-active-icon-primary btn-active-text-primary">
+                                                                    <i class="ki-outline ki-file-down fs-5 "></i>
+                                                                    Download
+                                                                </a></td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="detalhe-homologacao.html"
+                                                                    class="text-gray-800 text-hover-primary fw-bold"
+                                                                    data-kt-ecommerce-product-filter="product_name">
+                                                                    CONTRATO DE PRETAÇÃO DE SERVIÇOS</a></td>
+                                                            <td class="pe-0"> 25/03/2025</td>
+                                                            <td class="pe-0">25/03/2026</td>
+                                                            <td class="pe-0">Júlio César</td>
+                                                            <td class="pe-0">julio.cesar@albioma.com.br</td>
+                                                            <td class="pe-0 text-center">
+                                                                <div class="badge badge-light-success text-uppercase">
+                                                                    Vigente</div>
+                                                            </td>
+                                                            <td class="pe-0 text-center"><a href="#"
+                                                                    class="btn btn-sm btn-active-icon-primary btn-active-text-primary">
+                                                                    <i class="ki-outline ki-file-down fs-5 "></i>
+                                                                    Download
+                                                                </a></td>
+
+
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="detalhe-homologacao.html"
+                                                                    class="text-gray-800 text-hover-primary fw-bold"
+                                                                    data-kt-ecommerce-product-filter="product_name">
+                                                                    CONTRATO PARA FORNECIMENTO DE MÃO DE OBRA</a></td>
+                                                            <td class="pe-0"> 25/03/2025</td>
+                                                            <td class="pe-0">25/03/2026</td>
+                                                            <td class="pe-0">Augusto dos Anjos</td>
+                                                            <td class="pe-0">augusto.anjos@albioma.com.br</td>
+                                                            <td class="pe-0 text-center">
+                                                                <div class="badge badge-light-danger text-uppercase">
+                                                                    Vencido</div>
+                                                            </td>
+                                                            <td class="pe-0 text-center"><a href="#"
+                                                                    class="btn btn-sm btn-active-icon-primary btn-active-text-primary">
+                                                                    <i class="ki-outline ki-file-down fs-5 "></i>
+                                                                    Download
+                                                                </a></td>
+
+
+                                                        </tr>
+
+                                                    </tbody>
+                                                    <tfoot></tfoot>
+                                                </table>
+                                            </div>
+                                            <div id="" class="row">
+                                                <div id=""
+                                                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start dt-toolbar">
+                                                    <div><select aria-controls="kt_ecommerce_products_table"
+                                                            class="form-select form-select-solid form-select-sm"
+                                                            id="dt-length-0">
+                                                            <option value="10">10</option>
+                                                            <option value="25">25</option>
+                                                            <option value="50">50</option>
+                                                            <option value="100">100</option>
+                                                        </select><label for="dt-length-0"></label></div>
+                                                </div>
+                                                <div id=""
+                                                    class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                    <div class="dt-paging paging_simple_numbers">
+                                                        <nav aria-label="pagination">
+                                                            <ul class="pagination">
+                                                                <li class="dt-paging-button page-item disabled"><button
+                                                                        class="page-link previous" role="link"
+                                                                        type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        aria-disabled="true" aria-label="Previous"
+                                                                        data-dt-idx="previous" tabindex="-1"><i
+                                                                            class="previous"></i></button></li>
+                                                                <li class="dt-paging-button page-item active"><button
+                                                                        class="page-link" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        aria-current="page" data-dt-idx="0">1</button>
+                                                                </li>
+                                                                <li class="dt-paging-button page-item"><button
+                                                                        class="page-link" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        data-dt-idx="1">2</button></li>
+                                                                <li class="dt-paging-button page-item"><button
+                                                                        class="page-link" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        data-dt-idx="2">3</button></li>
+                                                                <li class="dt-paging-button page-item"><button
+                                                                        class="page-link" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        data-dt-idx="3">4</button></li>
+                                                                <li class="dt-paging-button page-item"><button
+                                                                        class="page-link" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        data-dt-idx="4">5</button></li>
+                                                                <li class="dt-paging-button page-item"><button
+                                                                        class="page-link next" role="link" type="button"
+                                                                        aria-controls="kt_ecommerce_products_table"
+                                                                        aria-label="Next" data-dt-idx="next"><i
+                                                                            class="next"></i></button></li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dt-autosize" style="width: 100%; height: 0px;"></div>
+                                        </div>
+                                        <!--end::Table-->
+                                    </div>
+                                    <!--end::Card body-->
                                 </div>
-                                <!--end:: Row-->
-                                <!--begin::Row-->
-                                <div class="row g-5 gx-xl-10 mb-5 mb-xl-10">
-                                    <!--begin::Col-->
-                                    <div class="col-xl-6">
-
-                                        <!--begin::Table Widget 5-->
-                                        <div class="card card-flush h-xl-100" data-select2-id="select2-data-24-ketx">
-                                            <!--begin::Card header-->
-                                            <div class="card-header pt-7">
-                                                <h3 class="card-title align-items-center">
-
-                                                    <div class="symbol symbol-50px me-5">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i class="ki-outline ki-delivery fs-1 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="card-label fw-bold text-gray-900">Ativos</span>
-                                                        <span class="text-gray-500 mt-1 fw-semibold fs-6">Total de 1
-                                                            ativo</span>
-                                                    </div>
-                                                </h3>
-                                            </div>
-                                            <!--end::Card header-->
-
-                                            <!--begin::Card body-->
-                                            <div class="card-body"> <!--begin::Table-->
-                                                <div id="kt_table_widget_5_table_wrapper"
-                                                    class="dt-container dt-bootstrap5 dt-empty-footer">
-                                                    <div id="" class="table-responsive">
-                                                        <table
-                                                            class="table align-middle table-row-dashed fs-6 gy-3 dataTable"
-                                                            id="kt_table_widget_5_table" style="width: 100%;">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <!--begin::Table row-->
-                                                                <tr
-                                                                    class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-                                                                    <th class="text-start pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Chasi</span>
-                                                                    </th>
-                                                                    <th class="text-start pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Marca</span>
-                                                                    </th>
-                                                                    <th class="text-start pe-3 min-w-100px ">
-                                                                        <span class="dt-column-title">Modelo</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Status</span>
-                                                                    </th>
-                                                                </tr>
-                                                                <!--end::Table row-->
-                                                            </thead>
-                                                            <!--end::Table head-->
-                                                            <!--begin::Table body-->
-                                                            <tbody class="text-gray-600">
-                                                                <tr>
-                                                                    <td><a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">9BWZZZ546VB123456
-                                                                        </a>
-                                                                    <td class="text-start">Fiat</td>
-                                                                    <td class="text-start"> Mobi Treacking</td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-danger text-uppercase">Pendente</span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div id="" class="row">
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start dt-toolbar">
-                                                        </div>
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-autosize" style="width: 100%; height: 0px;"></div>
-                                                </div>
-                                                <!--end::Table-->
-                                            </div>
-                                            <!--end::Card body-->
-                                        </div>
-                                        <!--end::Table Widget 5-->
-                                    </div>
-                                    <!--end::Col-->
-
-                                    <!--begin::Col-->
-                                    <div class="col-xl-6" data-select2-id="select2-data-25-o7jb">
-
-                                        <!--begin::Table Widget 5-->
-                                        <div class="card card-flush h-xl-100" data-select2-id="select2-data-24-ketx">
-                                            <!--begin::Card header-->
-                                            <div class="card-header pt-7">
-                                                <h3 class="card-title align-items-center">
-
-                                                    <div class="symbol symbol-50px me-5">
-                                                        <span class="symbol-label bg-light-primary">
-                                                            <i class="ki-outline ki-cheque fs-1 text-primary"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <span class="card-label fw-bold text-gray-900">Notas
-                                                            Fiscais</span>
-                                                        <span class="text-gray-500 mt-1 fw-semibold fs-6">Total de 2
-                                                            notas fiscais</span>
-                                                    </div>
-                                                </h3>
-                                            </div>
-                                            <!--end::Card header-->
-
-                                            <!--begin::Card body-->
-                                            <div class="card-body"> <!--begin::Table-->
-                                                <div id="kt_table_widget_5_table_wrapper"
-                                                    class="dt-container dt-bootstrap5 dt-empty-footer">
-                                                    <div id="" class="table-responsive">
-                                                        <table
-                                                            class="table align-middle table-row-dashed fs-6 gy-3 dataTable"
-                                                            id="kt_table_widget_5_table" style="width: 100%;">
-                                                            <!--begin::Table head-->
-                                                            <thead>
-                                                                <!--begin::Table row-->
-                                                                <tr
-                                                                    class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
-                                                                    <th class="min-w-150px">
-                                                                        <span class="dt-column-title">Número</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px ">
-                                                                        <span class="dt-column-title">Período</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px ">
-                                                                        <span class="dt-column-title">Pagamento</span>
-                                                                    </th>
-                                                                    <th class="text-center pe-3 min-w-100px">
-                                                                        <span class="dt-column-title">Status</span>
-                                                                    </th>
-                                                                </tr>
-                                                                <!--end::Table row-->
-                                                            </thead>
-                                                            <!--end::Table head-->
-                                                            <!--begin::Table body-->
-                                                            <tbody class="text-gray-600">
-                                                                <tr>
-                                                                    <td><a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">42743</a>
-                                                                    </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"> - </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-danger text-uppercase">Pendente</span>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td><a href="#"
-                                                                            class="text-gray-900 text-hover-primary fw-bold">42744</a>
-                                                                    </td>
-                                                                    <td class="text-center"> 01/2026 </td>
-                                                                    <td class="text-center"> - </td>
-                                                                    <td class="text-center"><span
-                                                                            class="badge badge-light-danger text-uppercase">Pendente</span>
-                                                                    </td>
-                                                                </tr>
-
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                    <div id="" class="row">
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start dt-toolbar">
-                                                        </div>
-                                                        <div id=""
-                                                            class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-autosize" style="width: 100%; height: 0px;"></div>
-                                                </div>
-                                                <!--end::Table-->
-                                            </div>
-                                            <!--end::Card body-->
-                                        </div>
-                                        <!--end::Table Widget 5-->
-                                    </div>
-                                    <!--end::Col-->
-                                </div>
-                                <!--end:: Row-->
+                                <!--end::Contratos-->
                             </div>
                             <!--end::Content container-->
                         </div>

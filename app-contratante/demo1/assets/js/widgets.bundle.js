@@ -1482,6 +1482,499 @@ KTUtil.onDOMContentLoaded(function() {
 "use strict";
 
 // Class definition
+var KTMapsWidget1 = (function () {
+    // Private methods
+    var initMap = function () {
+        // Check if amchart library is included
+        if (typeof am5 === 'undefined') {
+            return;
+        }
+
+        var element = document.getElementById("kt_maps_widget_1_map");
+
+        if (!element) {
+            return;
+        }
+
+        var root;
+
+        var init = function() {
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            root = am5.Root.new(element);
+
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([am5themes_Animated.new(root)]);
+
+            // Create the map chart
+            // https://www.amcharts.com/docs/v5/charts/map-chart/
+            var chart = root.container.children.push(
+                am5map.MapChart.new(root, {
+                    panX: "translateX",
+                    panY: "translateY",
+                    projection: am5map.geoMercator(),
+					paddingLeft: 0,
+					paddingrIGHT: 0,
+					paddingBottom: 0
+                })
+            );
+
+            // Create main polygon series for countries
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+            var polygonSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow,
+                    exclude: ["AQ"],
+                })
+            );
+
+            polygonSeries.mapPolygons.template.setAll({
+                tooltipText: "{name}",
+                toggleKey: "active",
+                interactive: true,
+				fill: am5.color(KTUtil.getCssVariableValue('--bs-gray-300')),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("active", {
+                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
+            });
+
+            // Highlighted Series
+            // Create main polygon series for countries
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+            var polygonSeriesHighlighted = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    //geoJSON: am5geodata_usaLow,
+					geoJSON: am5geodata_worldLow,
+					include: ['US', 'BR', 'DE', 'AU', 'JP']
+                })
+            );
+
+            polygonSeriesHighlighted.mapPolygons.template.setAll({
+                tooltipText: "{name}",
+                toggleKey: "active",
+                interactive: true,
+            });
+
+            var colors = am5.ColorSet.new(root, {});
+
+            polygonSeriesHighlighted.mapPolygons.template.set(
+                "fill",
+				am5.color(KTUtil.getCssVariableValue('--bs-primary')),
+            );
+
+            polygonSeriesHighlighted.mapPolygons.template.states.create("hover", {
+                fill: root.interfaceColors.get("primaryButtonHover"),
+            });
+
+            polygonSeriesHighlighted.mapPolygons.template.states.create("active", {
+                fill: root.interfaceColors.get("primaryButtonHover"),
+            });
+
+            // Add zoom control
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
+            //chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+
+            // Set clicking on "water" to zoom out
+            chart.chartContainer
+                .get("background")
+                .events.on("click", function () {
+                    chart.goHome();
+                });
+
+            // Make stuff animate on load
+            chart.appear(1000, 100);
+        }
+
+        // On amchart ready
+        am5.ready(function () {
+            init();
+        }); // end am5.ready()
+
+        // Update chart on theme mode change
+		KTThemeMode.on("kt.thememode.change", function() {     
+			// Destroy chart
+			root.dispose();
+
+			// Reinit chart
+			init();
+		});
+    };
+
+    // Public methods
+    return {
+        init: function () {
+            initMap();
+        },
+    };
+})();
+
+// Webpack support
+if (typeof module !== "undefined") {
+    module.exports = KTMapsWidget1;
+}
+
+// On document ready
+KTUtil.onDOMContentLoaded(function () {
+    KTMapsWidget1.init();
+});
+
+"use strict";
+
+// Class definition
+var KTMapsWidget2 = (function () {
+    // Private methods
+    var initMap = function () {
+        // Check if amchart library is included
+        if (typeof am5 === 'undefined') {
+            return;
+        }
+
+        var element = document.getElementById("kt_maps_widget_2_map");
+
+        if (!element) {
+            return;
+        }
+
+        // Root
+        var root;
+
+        var init = function() {
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            root = am5.Root.new(element);
+
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([am5themes_Animated.new(root)]);
+
+            // Create the map chart
+            // https://www.amcharts.com/docs/v5/charts/map-chart/
+            var chart = root.container.children.push(
+                am5map.MapChart.new(root, {
+                    panX: "translateX",
+                    panY: "translateY",
+                    projection: am5map.geoMercator(),
+					paddingLeft: 0,
+					paddingrIGHT: 0,
+					paddingBottom: 0
+                })
+            );
+
+            // Create main polygon series for countries
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+            var polygonSeries = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    geoJSON: am5geodata_worldLow,
+                    exclude: ["AQ"],
+                })
+            );
+
+            polygonSeries.mapPolygons.template.setAll({
+                tooltipText: "{name}",
+                toggleKey: "active",
+                interactive: true,
+				fill: am5.color(KTUtil.getCssVariableValue('--bs-gray-300')),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("hover", {
+                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
+            });
+
+            polygonSeries.mapPolygons.template.states.create("active", {
+                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
+            });
+
+            // Highlighted Series
+            // Create main polygon series for countries
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
+            var polygonSeriesHighlighted = chart.series.push(
+                am5map.MapPolygonSeries.new(root, {
+                    //geoJSON: am5geodata_usaLow,
+					geoJSON: am5geodata_worldLow,
+					include: ['US', 'BR', 'DE', 'AU', 'JP']
+                })
+            );
+
+            polygonSeriesHighlighted.mapPolygons.template.setAll({
+                tooltipText: "{name}",
+                toggleKey: "active",
+                interactive: true,
+            });
+
+            var colors = am5.ColorSet.new(root, {});
+
+            polygonSeriesHighlighted.mapPolygons.template.set(
+                "fill",
+				am5.color(KTUtil.getCssVariableValue('--bs-primary')),
+            );
+
+            polygonSeriesHighlighted.mapPolygons.template.states.create("hover", {
+                fill: root.interfaceColors.get("primaryButtonHover"),
+            });
+
+            polygonSeriesHighlighted.mapPolygons.template.states.create("active", {
+                fill: root.interfaceColors.get("primaryButtonHover"),
+            });
+
+            // Add zoom control
+            // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
+            //chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
+
+            // Set clicking on "water" to zoom out
+            chart.chartContainer
+                .get("background")
+                .events.on("click", function () {
+                    chart.goHome();
+                });
+
+            // Make stuff animate on load
+            chart.appear(1000, 100);
+        }
+
+        // On amchart ready
+        am5.ready(function () {
+            init();
+        }); // end am5.ready()
+
+        // Update chart on theme mode change
+		KTThemeMode.on("kt.thememode.change", function() {     
+			// Destroy chart
+			root.dispose();
+
+			// Reinit chart
+			init();
+		});
+    };
+
+    // Public methods
+    return {
+        init: function () {
+            initMap();
+        },
+    };
+})();
+
+// Webpack support
+if (typeof module !== "undefined") {
+    module.exports = KTMapsWidget2;
+}
+
+// On document ready
+KTUtil.onDOMContentLoaded(function () {
+    KTMapsWidget2.init();
+});
+
+"use strict";
+
+// Class definition
+var KTPlayersWidget1 = function () {
+    // Private methods
+    var initPlayers = function() {
+        // https://www.w3schools.com/jsref/dom_obj_audio.asp
+        // Toggle Handler
+        KTUtil.on(document.body, '[data-kt-element="list-play-button"]', 'click', function (e) {
+            var currentButton = this;
+
+            var audio = document.querySelector('[data-kt-element="audio-track-1"]');
+            var playIcon = this.querySelector('[data-kt-element="list-play-icon"]');
+            var pauseIcon = this.querySelector('[data-kt-element="list-pause-icon"]');
+
+            if (pauseIcon.classList.contains('d-none')) {
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            } else {
+                audio.pause();
+
+                playIcon.classList.remove('d-none');
+                pauseIcon.classList.add('d-none');
+            }
+            
+            var buttons = [].slice.call(document.querySelectorAll('[data-kt-element="list-play-button"]'));
+            buttons.map(function (button) {
+                if (button !== currentButton) {
+                    var playIcon = button.querySelector('[data-kt-element="list-play-icon"]');
+                    var pauseIcon = button.querySelector('[data-kt-element="list-pause-icon"]');
+
+                    playIcon.classList.remove('d-none');
+                    pauseIcon.classList.add('d-none');
+                }
+            });
+        });
+    }
+
+    // Public methods
+    return {
+        init: function () {
+            initPlayers();
+        }   
+    }
+}();
+
+// Webpack support
+if (typeof module !== 'undefined') {
+    module.exports = KTPlayersWidget1;
+}
+
+// Window load
+window.addEventListener("load", function() {
+    KTPlayersWidget1.init();
+}); 
+        
+        
+        
+           
+"use strict";
+
+// Class definition
+var KTPlayersWidget2 = function () {
+    // Private methods
+    var initPlayer = function() {
+        // https://www.w3schools.com/jsref/dom_obj_audio.asp
+        var element = document.getElementById("kt_player_widget_2");
+
+        if ( !element ) {
+            return;
+        }
+
+        var audio = element.querySelector('[data-kt-element="audio-track-1"]');
+        var progress = element.querySelector('[data-kt-element="progress"]');        
+        var currentTime = element.querySelector('[data-kt-element="current-time"]');
+        var duration = element.querySelector('[data-kt-element="duration"]');
+        var playButton = element.querySelector('[data-kt-element="play-button"]');
+        var playIcon = element.querySelector('[data-kt-element="play-icon"]');
+        var pauseIcon = element.querySelector('[data-kt-element="pause-icon"]');
+
+        var replayButton = element.querySelector('[data-kt-element="replay-button"]');
+        var shuffleButton = element.querySelector('[data-kt-element="shuffle-button"]');
+        var playNextButton = element.querySelector('[data-kt-element="play-next-button"]');
+        var playPrevButton = element.querySelector('[data-kt-element="play-prev-button"]');
+
+        var formatTime = function(time) {
+            var s = parseInt(time % 60);
+            var m = parseInt((time / 60) % 60);
+
+            return m + ':' + (s < 10 ? '0' : '') + s;
+        }
+
+        // Duration
+        duration.innerHTML = formatTime(audio.duration); 
+
+        // Update progress
+        var setBarProgress = function() {
+            progress.value = (audio.currentTime / audio.duration) * 100;
+        }
+        
+        // Handle audio update
+        var handleAudioUpdate = function() {
+            currentTime.innerHTML = formatTime(audio.currentTime);
+
+            setBarProgress();
+
+            if (this.ended) {
+                playIcon.classList.remove('d-none');
+                pauseIcon.classList.add('d-none');
+            }
+        }
+
+        audio.addEventListener('timeupdate', handleAudioUpdate);
+
+        // Handle play
+        playButton.addEventListener('click', function() {
+            if (audio.duration > 0 && !audio.paused) {
+                audio.pause();
+
+                playIcon.classList.remove('d-none');
+                pauseIcon.classList.add('d-none');
+            } else if (audio.readyState >= 2) {
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            }
+        });
+
+        // Handle replay
+        replayButton.addEventListener('click', function() {
+            if (audio.readyState >= 2) {
+                audio.currentTime = 0;
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            }
+        });
+
+        // Handle prev play
+        playPrevButton.addEventListener('click', function() {
+            if (audio.readyState >= 2) {
+                audio.currentTime = 0;
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            }
+        });
+
+        // Handle next play
+        playNextButton.addEventListener('click', function() {
+            if (audio.readyState >= 2) {
+                audio.currentTime = 0;
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            }
+        });
+
+        // Shuffle replay
+        shuffleButton.addEventListener('click', function() {
+            if (audio.readyState >= 2) {
+                audio.currentTime = 0;
+                audio.play();
+
+                playIcon.classList.add('d-none');
+                pauseIcon.classList.remove('d-none');
+            }
+        });
+
+        // Handle track change
+        progress.addEventListener('change', function() {
+            audio.currentTime = progress.value;
+
+            playIcon.classList.add('d-none');
+            pauseIcon.classList.remove('d-none');
+            audio.play();
+        });
+    }
+
+    // Public methods
+    return {
+        init: function () {
+            initPlayer();
+        }   
+    }
+}();
+
+// Webpack support
+if (typeof module !== 'undefined') {
+    module.exports = KTPlayersWidget2;
+}
+
+// Window load
+window.addEventListener("load", function() {
+    KTPlayersWidget2.init();
+}); 
+"use strict";
+
+// Class definition
 var KTChartsWidget1 = function () {
     var chart = {
         self: null,
@@ -16076,499 +16569,6 @@ KTUtil.onDOMContentLoaded(function() {
 
 
  
-"use strict";
-
-// Class definition
-var KTPlayersWidget1 = function () {
-    // Private methods
-    var initPlayers = function() {
-        // https://www.w3schools.com/jsref/dom_obj_audio.asp
-        // Toggle Handler
-        KTUtil.on(document.body, '[data-kt-element="list-play-button"]', 'click', function (e) {
-            var currentButton = this;
-
-            var audio = document.querySelector('[data-kt-element="audio-track-1"]');
-            var playIcon = this.querySelector('[data-kt-element="list-play-icon"]');
-            var pauseIcon = this.querySelector('[data-kt-element="list-pause-icon"]');
-
-            if (pauseIcon.classList.contains('d-none')) {
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            } else {
-                audio.pause();
-
-                playIcon.classList.remove('d-none');
-                pauseIcon.classList.add('d-none');
-            }
-            
-            var buttons = [].slice.call(document.querySelectorAll('[data-kt-element="list-play-button"]'));
-            buttons.map(function (button) {
-                if (button !== currentButton) {
-                    var playIcon = button.querySelector('[data-kt-element="list-play-icon"]');
-                    var pauseIcon = button.querySelector('[data-kt-element="list-pause-icon"]');
-
-                    playIcon.classList.remove('d-none');
-                    pauseIcon.classList.add('d-none');
-                }
-            });
-        });
-    }
-
-    // Public methods
-    return {
-        init: function () {
-            initPlayers();
-        }   
-    }
-}();
-
-// Webpack support
-if (typeof module !== 'undefined') {
-    module.exports = KTPlayersWidget1;
-}
-
-// Window load
-window.addEventListener("load", function() {
-    KTPlayersWidget1.init();
-}); 
-        
-        
-        
-           
-"use strict";
-
-// Class definition
-var KTPlayersWidget2 = function () {
-    // Private methods
-    var initPlayer = function() {
-        // https://www.w3schools.com/jsref/dom_obj_audio.asp
-        var element = document.getElementById("kt_player_widget_2");
-
-        if ( !element ) {
-            return;
-        }
-
-        var audio = element.querySelector('[data-kt-element="audio-track-1"]');
-        var progress = element.querySelector('[data-kt-element="progress"]');        
-        var currentTime = element.querySelector('[data-kt-element="current-time"]');
-        var duration = element.querySelector('[data-kt-element="duration"]');
-        var playButton = element.querySelector('[data-kt-element="play-button"]');
-        var playIcon = element.querySelector('[data-kt-element="play-icon"]');
-        var pauseIcon = element.querySelector('[data-kt-element="pause-icon"]');
-
-        var replayButton = element.querySelector('[data-kt-element="replay-button"]');
-        var shuffleButton = element.querySelector('[data-kt-element="shuffle-button"]');
-        var playNextButton = element.querySelector('[data-kt-element="play-next-button"]');
-        var playPrevButton = element.querySelector('[data-kt-element="play-prev-button"]');
-
-        var formatTime = function(time) {
-            var s = parseInt(time % 60);
-            var m = parseInt((time / 60) % 60);
-
-            return m + ':' + (s < 10 ? '0' : '') + s;
-        }
-
-        // Duration
-        duration.innerHTML = formatTime(audio.duration); 
-
-        // Update progress
-        var setBarProgress = function() {
-            progress.value = (audio.currentTime / audio.duration) * 100;
-        }
-        
-        // Handle audio update
-        var handleAudioUpdate = function() {
-            currentTime.innerHTML = formatTime(audio.currentTime);
-
-            setBarProgress();
-
-            if (this.ended) {
-                playIcon.classList.remove('d-none');
-                pauseIcon.classList.add('d-none');
-            }
-        }
-
-        audio.addEventListener('timeupdate', handleAudioUpdate);
-
-        // Handle play
-        playButton.addEventListener('click', function() {
-            if (audio.duration > 0 && !audio.paused) {
-                audio.pause();
-
-                playIcon.classList.remove('d-none');
-                pauseIcon.classList.add('d-none');
-            } else if (audio.readyState >= 2) {
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            }
-        });
-
-        // Handle replay
-        replayButton.addEventListener('click', function() {
-            if (audio.readyState >= 2) {
-                audio.currentTime = 0;
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            }
-        });
-
-        // Handle prev play
-        playPrevButton.addEventListener('click', function() {
-            if (audio.readyState >= 2) {
-                audio.currentTime = 0;
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            }
-        });
-
-        // Handle next play
-        playNextButton.addEventListener('click', function() {
-            if (audio.readyState >= 2) {
-                audio.currentTime = 0;
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            }
-        });
-
-        // Shuffle replay
-        shuffleButton.addEventListener('click', function() {
-            if (audio.readyState >= 2) {
-                audio.currentTime = 0;
-                audio.play();
-
-                playIcon.classList.add('d-none');
-                pauseIcon.classList.remove('d-none');
-            }
-        });
-
-        // Handle track change
-        progress.addEventListener('change', function() {
-            audio.currentTime = progress.value;
-
-            playIcon.classList.add('d-none');
-            pauseIcon.classList.remove('d-none');
-            audio.play();
-        });
-    }
-
-    // Public methods
-    return {
-        init: function () {
-            initPlayer();
-        }   
-    }
-}();
-
-// Webpack support
-if (typeof module !== 'undefined') {
-    module.exports = KTPlayersWidget2;
-}
-
-// Window load
-window.addEventListener("load", function() {
-    KTPlayersWidget2.init();
-}); 
-"use strict";
-
-// Class definition
-var KTMapsWidget1 = (function () {
-    // Private methods
-    var initMap = function () {
-        // Check if amchart library is included
-        if (typeof am5 === 'undefined') {
-            return;
-        }
-
-        var element = document.getElementById("kt_maps_widget_1_map");
-
-        if (!element) {
-            return;
-        }
-
-        var root;
-
-        var init = function() {
-            // Create root element
-            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            root = am5.Root.new(element);
-
-            // Set themes
-            // https://www.amcharts.com/docs/v5/concepts/themes/
-            root.setThemes([am5themes_Animated.new(root)]);
-
-            // Create the map chart
-            // https://www.amcharts.com/docs/v5/charts/map-chart/
-            var chart = root.container.children.push(
-                am5map.MapChart.new(root, {
-                    panX: "translateX",
-                    panY: "translateY",
-                    projection: am5map.geoMercator(),
-					paddingLeft: 0,
-					paddingrIGHT: 0,
-					paddingBottom: 0
-                })
-            );
-
-            // Create main polygon series for countries
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-            var polygonSeries = chart.series.push(
-                am5map.MapPolygonSeries.new(root, {
-                    geoJSON: am5geodata_worldLow,
-                    exclude: ["AQ"],
-                })
-            );
-
-            polygonSeries.mapPolygons.template.setAll({
-                tooltipText: "{name}",
-                toggleKey: "active",
-                interactive: true,
-				fill: am5.color(KTUtil.getCssVariableValue('--bs-gray-300')),
-            });
-
-            polygonSeries.mapPolygons.template.states.create("hover", {
-                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
-            });
-
-            polygonSeries.mapPolygons.template.states.create("active", {
-                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
-            });
-
-            // Highlighted Series
-            // Create main polygon series for countries
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-            var polygonSeriesHighlighted = chart.series.push(
-                am5map.MapPolygonSeries.new(root, {
-                    //geoJSON: am5geodata_usaLow,
-					geoJSON: am5geodata_worldLow,
-					include: ['US', 'BR', 'DE', 'AU', 'JP']
-                })
-            );
-
-            polygonSeriesHighlighted.mapPolygons.template.setAll({
-                tooltipText: "{name}",
-                toggleKey: "active",
-                interactive: true,
-            });
-
-            var colors = am5.ColorSet.new(root, {});
-
-            polygonSeriesHighlighted.mapPolygons.template.set(
-                "fill",
-				am5.color(KTUtil.getCssVariableValue('--bs-primary')),
-            );
-
-            polygonSeriesHighlighted.mapPolygons.template.states.create("hover", {
-                fill: root.interfaceColors.get("primaryButtonHover"),
-            });
-
-            polygonSeriesHighlighted.mapPolygons.template.states.create("active", {
-                fill: root.interfaceColors.get("primaryButtonHover"),
-            });
-
-            // Add zoom control
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
-            //chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
-
-            // Set clicking on "water" to zoom out
-            chart.chartContainer
-                .get("background")
-                .events.on("click", function () {
-                    chart.goHome();
-                });
-
-            // Make stuff animate on load
-            chart.appear(1000, 100);
-        }
-
-        // On amchart ready
-        am5.ready(function () {
-            init();
-        }); // end am5.ready()
-
-        // Update chart on theme mode change
-		KTThemeMode.on("kt.thememode.change", function() {     
-			// Destroy chart
-			root.dispose();
-
-			// Reinit chart
-			init();
-		});
-    };
-
-    // Public methods
-    return {
-        init: function () {
-            initMap();
-        },
-    };
-})();
-
-// Webpack support
-if (typeof module !== "undefined") {
-    module.exports = KTMapsWidget1;
-}
-
-// On document ready
-KTUtil.onDOMContentLoaded(function () {
-    KTMapsWidget1.init();
-});
-
-"use strict";
-
-// Class definition
-var KTMapsWidget2 = (function () {
-    // Private methods
-    var initMap = function () {
-        // Check if amchart library is included
-        if (typeof am5 === 'undefined') {
-            return;
-        }
-
-        var element = document.getElementById("kt_maps_widget_2_map");
-
-        if (!element) {
-            return;
-        }
-
-        // Root
-        var root;
-
-        var init = function() {
-            // Create root element
-            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-            root = am5.Root.new(element);
-
-            // Set themes
-            // https://www.amcharts.com/docs/v5/concepts/themes/
-            root.setThemes([am5themes_Animated.new(root)]);
-
-            // Create the map chart
-            // https://www.amcharts.com/docs/v5/charts/map-chart/
-            var chart = root.container.children.push(
-                am5map.MapChart.new(root, {
-                    panX: "translateX",
-                    panY: "translateY",
-                    projection: am5map.geoMercator(),
-					paddingLeft: 0,
-					paddingrIGHT: 0,
-					paddingBottom: 0
-                })
-            );
-
-            // Create main polygon series for countries
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-            var polygonSeries = chart.series.push(
-                am5map.MapPolygonSeries.new(root, {
-                    geoJSON: am5geodata_worldLow,
-                    exclude: ["AQ"],
-                })
-            );
-
-            polygonSeries.mapPolygons.template.setAll({
-                tooltipText: "{name}",
-                toggleKey: "active",
-                interactive: true,
-				fill: am5.color(KTUtil.getCssVariableValue('--bs-gray-300')),
-            });
-
-            polygonSeries.mapPolygons.template.states.create("hover", {
-                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
-            });
-
-            polygonSeries.mapPolygons.template.states.create("active", {
-                fill: am5.color(KTUtil.getCssVariableValue('--bs-success')),
-            });
-
-            // Highlighted Series
-            // Create main polygon series for countries
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-polygon-series/
-            var polygonSeriesHighlighted = chart.series.push(
-                am5map.MapPolygonSeries.new(root, {
-                    //geoJSON: am5geodata_usaLow,
-					geoJSON: am5geodata_worldLow,
-					include: ['US', 'BR', 'DE', 'AU', 'JP']
-                })
-            );
-
-            polygonSeriesHighlighted.mapPolygons.template.setAll({
-                tooltipText: "{name}",
-                toggleKey: "active",
-                interactive: true,
-            });
-
-            var colors = am5.ColorSet.new(root, {});
-
-            polygonSeriesHighlighted.mapPolygons.template.set(
-                "fill",
-				am5.color(KTUtil.getCssVariableValue('--bs-primary')),
-            );
-
-            polygonSeriesHighlighted.mapPolygons.template.states.create("hover", {
-                fill: root.interfaceColors.get("primaryButtonHover"),
-            });
-
-            polygonSeriesHighlighted.mapPolygons.template.states.create("active", {
-                fill: root.interfaceColors.get("primaryButtonHover"),
-            });
-
-            // Add zoom control
-            // https://www.amcharts.com/docs/v5/charts/map-chart/map-pan-zoom/#Zoom_control
-            //chart.set("zoomControl", am5map.ZoomControl.new(root, {}));
-
-            // Set clicking on "water" to zoom out
-            chart.chartContainer
-                .get("background")
-                .events.on("click", function () {
-                    chart.goHome();
-                });
-
-            // Make stuff animate on load
-            chart.appear(1000, 100);
-        }
-
-        // On amchart ready
-        am5.ready(function () {
-            init();
-        }); // end am5.ready()
-
-        // Update chart on theme mode change
-		KTThemeMode.on("kt.thememode.change", function() {     
-			// Destroy chart
-			root.dispose();
-
-			// Reinit chart
-			init();
-		});
-    };
-
-    // Public methods
-    return {
-        init: function () {
-            initMap();
-        },
-    };
-})();
-
-// Webpack support
-if (typeof module !== "undefined") {
-    module.exports = KTMapsWidget2;
-}
-
-// On document ready
-KTUtil.onDOMContentLoaded(function () {
-    KTMapsWidget2.init();
-});
-
 "use strict";
 
 // Class definition
